@@ -15,9 +15,13 @@ var express = require('express'),
 
 var app = module.exports = express();
  
+  app.use(bodyParser.urlencoded({
+    extended: true
+  }));
 
- var db = mongoose(),
-    app = express();
+  app.use(bodyParser.json());
+
+ var db = mongoose();
 app.set('port', 3000);
 /**
  * Configuration
@@ -25,10 +29,13 @@ app.set('port', 3000);
 
 // all environments
 
+
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 //app.use(morgan('dev'));
-// require('./routes/users.server.routes.js')(app);
+require('./routes/users.server.routes.js')(app);
+//require('./routes/index.js')(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 //
