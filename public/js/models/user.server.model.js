@@ -9,6 +9,14 @@ var UserSchema = new Schema({
     gameId: Number,
 });
 
+var UserSchema = new Schema({
+    username: {
+    type: String,
+    unique: true
+  },
+
+});
+
 mongoose.model('User', UserSchema);
 
 /*
@@ -27,4 +35,7 @@ Postman-Token: 33104b4e-2ab4-44f9-54bc-03c33cc53040
     "games": "test",
     "gameId": "125"
 }
+
+
+curl -X PUT -H "Content-Type: application/json" -d '{"firstName": "UpdatedName"}' localhost:3000/users/[59363695c4b516171413b343]
 */
