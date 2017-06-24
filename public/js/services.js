@@ -15,4 +15,16 @@ angular.module('myApp.services', []).
 			return "These are your friends";
 		}
 	};
+})
+
+
+.factory('gameBoard', function(){
+
+	return {
+
+		gameBoard: function(){
+			return "These are your boards";
+		}
+		
+	};
 });

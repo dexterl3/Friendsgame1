@@ -9,6 +9,7 @@
     "jade": "~0.31.2",
     "method-override": "^1.0.0",
     "mongoose": "^4.9.2",
-    "morgan": "^1.0.0"
+    "morgan": "^1.0.0",
+    "passport": "^0.3.2"
   }
 }
