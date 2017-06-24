@@ -22,7 +22,9 @@ block body
       span(app-version)
       p Create Person text: 
       {{ friends.createFriends()}}
-      {{ games.gameBoard() }}
+       
+      {{ games.addToGameBoard(gameB,4,4,6) }}
+      p abc
 
   script(src='js/lib/angular/angular.js')
   script(src='js/app.js')

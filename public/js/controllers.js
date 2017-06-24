@@ -21,7 +21,10 @@ angular.module('myApp.controllers', []).
     });
 
     $scope.friends = createFriends;
-    $scope.games = gameBoard;
+    $scope.games = gameBoard
+
+    $scope.gameB = gameBoard.gameB;
+     
 
     $http.get('/users')
     .success(function (data, status, headers, config) {

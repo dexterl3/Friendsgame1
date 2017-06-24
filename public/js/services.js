@@ -20,11 +20,38 @@ angular.module('myApp.services', []).
 
 .factory('gameBoard', function(){
 
-	return {
+	var game = [
+				[0,0,0,0,0],
+				[0,0,0,0,0],
+				[0,0,0,0,0],
+				[0,0,0,0,0],
+				[0,0,0,0,0]
+			];
 
-		gameBoard: function(){
-			return "These are your boards";
+	return {
+ 		gameB: game,
+
+		// createGameBoard: function(){
+		// 	var board = [
+		// 		[0,0,0,0,0],
+		// 		[0,0,0,0,0],
+		// 		[0,0,0,0,0],
+		// 		[0,0,0,0,0],
+		// 		[0,0,0,0,0]
+		// 	];
+		// 	game = board;
+		// 	console.log(game);
+		// 	return board;
+		// },
+
+		//{{ games.createGameBoard(gameB) }}
+
+		addToGameBoard: function(game,x, y,z){
+			game[x][y] = z;
+			console.log(game);
+			return "These are your boards " + x  + " "+ y;
 		}
-		
+		//  {{ games.addToGameBoard(5,5,1) }}
+	
 	};
 });
